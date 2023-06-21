@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-image: url("./marioGifs/retro.webp");
+  background-size: cover;
+}
+
+
+
+.game_screen {
+  width: 70%;
+  height: 600px;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("./marioGifs/background.jpg");
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 20px;
+  border: 7px solid black;
+}
+
+.tubo {
+  position: absolute;
+  bottom: 15px;
+  width: 90px;
+  animation: tubo_animation 2s infinite linear;
+}
+
+@keyframes tubo_animation {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.mario {
+  position: absolute;
+  bottom: 15px;
+  width: 180px;
+}
+
+.jump {
+  animation: jump 600ms ease-out;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 15;
+  }
+  40% {
+    bottom: 200px;
+  }
+  50% {
+    bottom: 200px;
+  }
+  60% {
+    bottom: 200px;
+  }
+
+  70% {
+    bottom: 160px;
+    /* }
+  80% {
+    bottom: 60px;
+  }
+  90% {
+    bottom: 30px; */
+  }
+  100% {
+    bottom: 15;
+  }
+}
+
+.chao {
+  background-color: rgb(1, 168, 1);
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  bottom: 0px;
+  border-top: 5px solid black;
+}
+
+.cloud {
+  margin-top: 10px;
+  position: absolute;
+  width: 600px;
+  height: 220px;
+  animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -600px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
