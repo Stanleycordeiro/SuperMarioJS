@@ -3,7 +3,8 @@ const tubo = document.getElementById("tubo");
 const cloud = document.getElementById("cloud");
 var gameOver = document.getElementById("gameOver");
 var gameScreen = document.getElementById("gameScreen");
-const menu = document.getElementById('menuGame')
+const menu = document.getElementById("menuGame");
+const btnReset = document.getElementById("resetBtn");
 
 //Pulo mario adiciionando e removendo a classe
 function mario_jump() {
@@ -16,19 +17,29 @@ function mario_jump() {
 
 //função adicionar imagem game over
 function addGameOver() {
-    gameOver.style.display = "block"; 
- 
+  gameOver.style.display = "block";
+}
+
+function addReset() {
+  setTimeout(() => {
+    btnReset.style.display = "block";
+  }, 800);
 }
 
 //função remover tela menu
-function removeMenu(){
-    setTimeout(() => {
-        menu.style.display = "none";
-        gameScreen.style.display = "block";    
-    }, 400);
-    
+function removeMenu() {
+  setTimeout(() => {
+    menu.style.display = "none";
+    gameScreen.style.display = "block";
+  }, 400);
 }
 
+//função para recarregar jogo
+function reload() {
+  setTimeout(() => {
+    location.reload();
+  }, 300);
+}
 
 //adicionando evento de colisão entre "mario" e "tubo"
 const loop = setInterval(() => {
@@ -37,9 +48,10 @@ const loop = setInterval(() => {
     .getComputedStyle(mario)
     .bottom.replace("px", "");
   const cloudPosition = +window.getComputedStyle(cloud).left.replace("px", "");
-    
+
   if (tuboPosition <= 140 && tuboPosition > 0 && marioPosition < 110) {
     addGameOver();
+    addReset();
 
     tubo.style.animation = "none";
     tubo.style.left = `${tuboPosition}px`;
@@ -53,8 +65,6 @@ const loop = setInterval(() => {
     mario.src = "./assets/marioGifs/marioDeath.png";
     mario.style.width = "150px";
     mario.style.marginLeft = "5px";
-
-    
 
     clearInterval(loop);
   }

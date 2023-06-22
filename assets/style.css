@@ -55,6 +55,19 @@ body {
   margin-top: 400px;
 }
 
+#resetBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 800px;
+  position: absolute; 
+  display: none;
+}
+
+#resetBtn:active {
+  transform: translateY(5px);
+}
+
 #btnStart:active {
   transform: translateY(5px);
 }
@@ -154,7 +167,7 @@ height: 580px;
 }
 
 .gameOver{
-  margin-top: 400px;
+  margin-top: 350px;
   position: absolute;
  
   width: 500px;
