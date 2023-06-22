@@ -10,33 +10,74 @@ body {
   background-size: cover;
 }
 
-
-
-.game_screen {
-  width: 70%;
+.mainGame {
+   width: 70%;
   height: 600px;
-  border: 1px solid black;
   margin: 0 auto;
   margin-top: 10%;
   position: relative;
   padding: 0;
   overflow: hidden;
-  /* background-image: url("./marioGifs/background.jpg");
-  background-size: cover; 
-  background-position: center;  */
   border-radius: 20px;
   border: 7px solid black;
+ 
 }
+
+.menuGame {
+  width: 100%;
+  height: 600px;
+  background-image: url(./marioGifs/bgMenu.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameOverDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#jsLogo{
+  width: 140px;
+  position: absolute;
+  margin-top: 100px;
+  /* right: 420px; */
+
+}
+
+#btnStart {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 400px;
+}
+
+#btnStart:active {
+  transform: translateY(5px);
+}
+
+#logo {
+  position: absolute;
+  margin-bottom: 300px;
+  width: 900px;
+}
+
+.game_screen {
+  width: 100%;
+  display: none;
+}
+
 #divbg {
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 
 #backgroundGame {
-  width: 100%;
-  height:100%;
-  
-  
+width: 100%;  
+height: 580px;  
 }
 
 
@@ -113,9 +154,9 @@ body {
 }
 
 .gameOver{
-  margin-top: 10px;
+  margin-top: 400px;
   position: absolute;
-  right:33%;
+ 
   width: 500px;
   height: 300px;
   display: none;

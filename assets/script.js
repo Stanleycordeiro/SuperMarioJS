@@ -3,6 +3,7 @@ const tubo = document.getElementById("tubo");
 const cloud = document.getElementById("cloud");
 var gameOver = document.getElementById("gameOver");
 var gameScreen = document.getElementById("gameScreen");
+const menu = document.getElementById('menuGame')
 
 //Pulo mario adiciionando e removendo a classe
 function mario_jump() {
@@ -19,9 +20,14 @@ function addGameOver() {
  
 }
 
- 
-
-
+//função remover tela menu
+function removeMenu(){
+    setTimeout(() => {
+        menu.style.display = "none";
+        gameScreen.style.display = "block";    
+    }, 400);
+    
+}
 
 
 //adicionando evento de colisão entre "mario" e "tubo"
