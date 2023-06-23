@@ -8,7 +8,9 @@ const menu = document.getElementById("menuGame");
 const btnReset = document.getElementById("resetBtn");
 const points = document.getElementById("cont");
 
-
+//variaveis gerais
+let pontuacao = 0;
+let verificarColisaoAtivo = false;
 
 //Pulo mario adiciionando e removendo a classe
 function mario_jump() {
@@ -17,7 +19,7 @@ function mario_jump() {
   setTimeout(() => {
     mario.classList.remove("jump");
   }, 500);
-} 
+}
 
 //função adicionar imagem game over
 function addGameOver() {
@@ -47,21 +49,20 @@ function reload() {
   }, 300);
 }
 
-
-let pontuacao = 0;
-let verificarColisaoAtivo = false;
-
+//jlogica jogo
 function verificarColisao() {
   const cloudPosition = +window.getComputedStyle(cloud).left.replace("px", "");
   const tuboPosition = tubo.offsetLeft;
-  const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "");
+  const marioPosition = +window
+    .getComputedStyle(mario)
+    .bottom.replace("px", "");
 
   if (tuboPosition < 20 && verificarColisaoAtivo) {
     incrementPont();
     verificarColisaoAtivo = false;
     setTimeout(() => {
       verificarColisaoAtivo = true;
-    }, 200); 
+    }, 200);
   }
 
   if (tuboPosition <= 270 && tuboPosition > 120 && marioPosition < 110) {
@@ -86,13 +87,12 @@ function verificarColisao() {
   setTimeout(verificarColisao, 10);
 }
 
+//função para acrescentar pontos
 function incrementPont() {
   pontuacao += 1;
   points.innerHTML = pontuacao;
- 
 }
 
 verificarColisao();
-
 
 document.addEventListener("keydown", mario_jump);

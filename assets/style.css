@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
 }
 
 body {
@@ -42,28 +45,23 @@ body {
 
 .points {
   margin-top: 20px;
-  margin-left: 100px;
+  left: 30px;
   display: flex;
   position: absolute;
  
 }
 
-.points h1 {
-  margin-right: 10px;
-  margin-top: 5px;
-}
 
-.points h2 {
-  margin-right: 0px;
-  margin-top: 10px;
+#pointsVar {
+  margin-top: 8px;
+  display: flex;
+  margin-left: 10px;
+
 }
 
 
 #moeda{
-  margin-top: 0px;
-  right: 50px;
-  position: absolute;
-  width: 80px;
+  width: 50px;
 }
 
 #jsLogo{
