@@ -40,6 +40,32 @@ body {
   align-items: center;
 }
 
+.points {
+  margin-top: 20px;
+  margin-left: 100px;
+  display: flex;
+  position: absolute;
+ 
+}
+
+.points h1 {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.points h2 {
+  margin-right: 0px;
+  margin-top: 10px;
+}
+
+
+#moeda{
+  margin-top: 0px;
+  right: 50px;
+  position: absolute;
+  width: 80px;
+}
+
 #jsLogo{
   width: 140px;
   position: absolute;
@@ -100,6 +126,8 @@ height: 580px;
   bottom: 15px;
   width: 90px;
   animation: tubo_animation 2s infinite linear;
+  /* left: 270px; */
+  /* margin-left: 270px; */
 }
 
 @keyframes tubo_animation {
@@ -115,6 +143,7 @@ height: 580px;
   position: absolute;
   bottom: 15px;
   width: 180px;
+  left: 130px;
 }
 
 .jump {

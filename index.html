@@ -8,19 +8,29 @@
   </head>
   <body>
     <div class="mainGame" id="mainGame">
+
+      <!-- //Tela menu -->
       <div class="menuGame" id="menuGame">
         <img src="./assets/marioGifs/logo.png" id="logo">
         <button id="btnStart" ><img src="./assets/marioGifs/btnStart.png" width="300px" onclick="removeMenu()"></button>
         <img src="./assets/marioGifs/js.png" id="jsLogo">
+       
         
+        <!-- Tela jogo -->
       </div>
       <div class="game_screen" id="gameScreen">
+       
+       
         <img
           src="./assets/marioGifs/clouds.png"
           alt=""
           class="cloud"
           id="cloud"
         />
+        <div class="points">
+          <img src="./assets/marioGifs/moeda.png" id="moeda">
+        <h1 id="cont">0</h1><h2>x</h2>
+        </div>
         <div id="gameOverDiv">
           <button id="resetBtn" onclick="reload()"><img src="./assets/marioGifs/reset.png" width="330px"></button>
         <img
