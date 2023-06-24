@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 body {
@@ -14,16 +14,16 @@ body {
 }
 
 .mainGame {
-   width: 70%;
+  width: 70%;
   height: 600px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   position: relative;
   padding: 0;
   overflow: hidden;
   border-radius: 20px;
   border: 7px solid black;
- 
 }
 
 .menuGame {
@@ -37,7 +37,44 @@ body {
   align-items: center;
 }
 
-#gameOverDiv{
+.win {
+  width: 100%;
+  height: 600px;
+  background-image: url(./marioGifs/bgWin.gif);
+  background-size:cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.win h1 {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border: 3px solid white;
+  position: absolute;
+  margin-bottom: 50px;
+}
+
+#dancing {
+  
+  position: absolute;
+  margin-bottom: 340px;
+  width: 220px;
+  display: none;
+}
+
+#medal {
+  position: absolute;
+  margin-top: 90px;
+  width: 90px;
+  display: none;
+}
+
+#gameOverDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,28 +85,23 @@ body {
   left: 30px;
   display: flex;
   position: absolute;
- 
 }
-
 
 #pointsVar {
   margin-top: 8px;
   display: flex;
   margin-left: 10px;
-
 }
 
-
-#moeda{
+#moeda {
   width: 50px;
 }
 
-#jsLogo{
+#jsLogo {
   width: 140px;
   position: absolute;
   margin-top: 100px;
   /* right: 420px; */
-
 }
 
 #btnStart {
@@ -79,15 +111,40 @@ body {
   margin-top: 400px;
 }
 
+#winBtn {
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 410px;
+  position: absolute;
+  display: none;
+}
+
+#card {
+  width: 500px;
+  height: 560px;
+  background-color: rgba(0, 0, 0, 0.541);
+  position:static;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 5px solid white;
+  display:none;
+}
+
+
 #resetBtn {
   border: none;
   background-color: transparent;
   cursor: pointer;
   margin-top: 800px;
-  position: absolute; 
+  position: absolute;
   display: none;
 }
 
+#winBtn:active {
+  transform: translateY(5px);
+}
 #resetBtn:active {
   transform: translateY(5px);
 }
@@ -113,24 +170,41 @@ body {
 }
 
 #backgroundGame {
-width: 100%;  
-height: 580px;  
+  width: 100%;
+  height: 580px;
 }
 
-
-
 .tubo {
+  right: 100%;
   position: absolute;
   bottom: 15px;
   width: 90px;
-  animation: tubo_animation 2s infinite linear;
-  /* left: 270px; */
-  /* margin-left: 270px; */
+  animation: tubo_animation 3s infinite linear;
+}
+
+#mensagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 20px;
+}
+
+#mensagem h4{
+  position: absolute;
+  margin-bottom: 15%;
+  display: none;
+}
+
+#mensagem h5{
+  position: absolute;
+  margin-bottom: 11%;
+ 
 }
 
 @keyframes tubo_animation {
   from {
-    right: -100px;
+    right: -120%;
   }
   to {
     right: 100%;
@@ -193,10 +267,10 @@ height: 580px;
   animation: clouds-animation 10s infinite linear;
 }
 
-.gameOver{
+.gameOver {
   margin-top: 350px;
   position: absolute;
- 
+
   width: 500px;
   height: 300px;
   display: none;

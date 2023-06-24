@@ -8,19 +8,34 @@
   </head>
   <body>
     <div class="mainGame" id="mainGame">
-
       <!-- //Tela menu -->
       <div class="menuGame" id="menuGame">
-        <img src="./assets/marioGifs/logo.png" id="logo">
-        <button id="btnStart" ><img src="./assets/marioGifs/btnStart.png" width="300px" onclick="removeMenu()"></button>
-        <img src="./assets/marioGifs/js.png" id="jsLogo">
-       
-        
-        <!-- Tela jogo -->
+        <img src="./assets/marioGifs/logo.png" id="logo" />
+        <button id="btnStart">
+          <img
+            src="./assets/marioGifs/btnStart.png"
+            width="300px"
+            onclick="removeMenu()"
+          />
+        </button>
+        <img src="./assets/marioGifs/js.png" id="jsLogo" />
       </div>
+      <!-- tela win -->
+
+      <div class="win" id="win">
+        <img src="./assets/marioGifs/medal.png"  id="medal">
+        <h1>Winner!</h1>
+        <img src="./assets/marioGifs/dancing.gif" width="300px" id="dancing" />
+        <button id="winBtn" onclick="reload()">
+          <img src="./assets/marioGifs/startbtn.png" width="180px" id="btnWin">
+        </button>
+        <div id="card"></div>
+        
+      </div>
+
+      <!-- Tela jogo -->
+
       <div class="game_screen" id="gameScreen">
-       
-       
         <img
           src="./assets/marioGifs/clouds.png"
           alt=""
@@ -28,18 +43,24 @@
           id="cloud"
         />
         <div class="points">
-          <img src="./assets/marioGifs/moeda.gif" id="moeda">
-        <div id="pointsVar"><h1 id="cont">0</h1><h2>x</h2></div>
+          <img src="./assets/marioGifs/moeda.gif" id="moeda" />
+          <div id="pointsVar">
+            <h1 id="cont">0</h1>
+            <h2>x</h2>
+          </div>
         </div>
         <div id="gameOverDiv">
-          <button id="resetBtn" onclick="reload()"><img src="./assets/marioGifs/reset.png" width="330px"></button>
-        <img
-          src="./assets/marioGifs/gameOver.png"
-          ;
-          id="gameOver"
-          class="gameOver"
-        />
+          <button id="resetBtn" onclick="reload()">
+            <img src="./assets/marioGifs/reset.png" width="330px" />
+          </button>
+          <img
+            src="./assets/marioGifs/gameOver.png"
+            ;
+            id="gameOver"
+            class="gameOver"
+          />
         </div>
+
         <img src="./assets/marioGifs/tubo.png" class="tubo" id="tubo" />
         <img src="./assets/marioGifs/marioRun.gif" class="mario" id="mario" />
 
@@ -49,6 +70,11 @@
 
         <div class="chao"></div>
       </div>
+    </div>
+
+    <div id="mensagem">
+      <h4 id="mesage">"O conhecimento liberta o homem de qualquer limitação"</h4>
+      <h5>Ao pressionar qualquer tecla o mario pula, ao peluar 10 canos você finaliza o jogo.</h5>
     </div>
 
     <script src="./assets/script.js"></script>
